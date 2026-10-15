@@ -55,6 +55,4 @@ nginx가 요청을 돌아가면서 나눠주는 거였다 (로드 밸런싱).
 제출 전에 `git status`로 compose.yaml / nginx.conf / .env.example은 있고
 .env는 없는 것 확인했다.
 
-```
-![scale 1](images/status.png)
-```
+![status](images/status.png)
