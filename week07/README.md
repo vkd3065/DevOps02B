@@ -12,12 +12,12 @@ nginx + web 3개 + redis까지 다 띄운 최종 상태에서 찍었다.
 (restart나 scale 직후에 찍으면 `health: starting`으로 나와서 조금 기다렸다가 찍음)
 
 ```
-NAME                IMAGE            COMMAND                  SERVICE   CREATED          STATUS                    PORTS
-guestbook-nginx-1   nginx:alpine     "/docker-entrypoint.…"   nginx     23 minutes ago   Up 23 minutes             0.0.0.0:8080->80/tcp, [::]:8080->80/tcp
-guestbook-redis-1   redis:7-alpine   "docker-entrypoint.s…"   redis     50 minutes ago   Up 50 minutes (healthy)   6379/tcp
-guestbook-web-1     guestbook-web    "python app.py"          web       11 minutes ago   Up 11 minutes (healthy)   0.0.0.0:53840->5000/tcp, [::]:53840->5000/tcp
-guestbook-web-2     guestbook-web    "python app.py"          web       11 minutes ago   Up 11 minutes (healthy)   0.0.0.0:53841->5000/tcp, [::]:53841->5000/tcp
-guestbook-web-3     guestbook-web    "python app.py"          web       11 minutes ago   Up 11 minutes (healthy)   0.0.0.0:53844->5000/tcp, [::]:53844->5000/tcp
+NAME                IMAGE            COMMAND                  SERVICE   CREATED          STATUS                   PORTS
+guestbook-nginx-1   nginx:alpine     "/docker-entrypoint.…"   nginx     48 seconds ago   Up 46 seconds            0.0.0.0:8080->80/tcp, [::]:8080->80/tcp
+guestbook-redis-1   redis:7-alpine   "docker-entrypoint.s…"   redis     2 days ago       Up 2 minutes (healthy)   6379/tcp
+guestbook-web-1     guestbook-web    "python app.py"          web       2 minutes ago    Up 2 minutes (healthy)   5000/tcp
+guestbook-web-2     guestbook-web    "python app.py"          web       10 seconds ago   Up 9 seconds (healthy)   5000/tcp
+guestbook-web-3     guestbook-web    "python app.py"          web       10 seconds ago   Up 9 seconds (healthy)   5000/tcp
 ```
 
 ## scale 후 Pod/Host가 바뀌는 것
