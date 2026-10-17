@@ -11,7 +11,7 @@ services:
 
     web:
       build: .
-      ports:
+      expose:
         - "5000"
       environment:
         APP_TITLE: "방명록"
