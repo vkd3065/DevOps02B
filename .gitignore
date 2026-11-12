@@ -4,3 +4,4 @@ week04/restore-check/
 .env
 .env
 midterm/*.log
+guestbook/k8s/secret.yaml
